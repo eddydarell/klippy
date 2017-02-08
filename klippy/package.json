@@ -1,0 +1,28 @@
+{
+  "name": "klippy",
+  "version": "1.0.0",
+  "description": "A simple clipboard buffer.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddydarell/klippy.git"
+  },
+  "keywords": [
+    "electron",
+    "clipboard",
+    "copy",
+    "paste"
+  ],
+  "author": "Eddy TheCodingLion Ntambwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eddydarell/klippy/issues"
+  },
+  "homepage": "https://github.com/eddydarell/klippy#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.10"
+  }
+}
