@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>klippy</title>
+    <style>
+        body {
+            width: 82px;
+            overflow: hidden;
+            -webkit-app-region: drag;
+        }
+
+        img {
+            width: 50px;
+            height: auto;
+            margin: 8px 10px 10px 10px;
+            border-radius: 100%;
+            transition: box-shadow 0.75s;
+            -webkit-app-region: no-drag;
+            user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        img:hover {
+            box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.5);
+        }
+
+        div.handle {
+            position: absolute;
+            top: -45px;
+            left: 7px;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(128, 128, 128, 0.55);
+            transition: -webkit-transition: top 0.3s;
+            transition: top 0.3s;
+            transition-timing-function: ease-out;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 5em;
+            border-bottom-left-radius: 5em;
+            border-top: 0;
+        }
+
+        div.handle:hover {
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="handle">
+        <img id="btn" src="assets/img/clipboard_icon.png" title="Klippy" alt="klippy" />
+    </div>
+    <script>
+        const {ipcRenderer} = require('electron');
+        var btn = document.querySelector('#btn');
+        btn.addEventListener('click', (e) => {
+            ipcRenderer.send('show-menu');
+        });
+    </script>
+</body>
+
+</html>

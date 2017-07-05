@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Klippy</title>
+    <style>
+        body {
+            background: rgba(66, 241, 0, 0);
+            font-family: sans-serif;
+            overflow-y: hidden;
+            height: 600px;
+        }
+        .main{
+            background: rgba(0, 0, 0, 0.31);
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-radius: 20px;
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .main > div{
+            margin: 0px;
+            height:  100%;
+        }
+        .item{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.8);
+            flex-grow: 1;
+            color: #CCC;
+            transition: transform flex-grow 1s;
+            border-radius: 10px;
+        }
+
+        .item > h4 {
+            color: #bbb;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .item > span {
+            color: #999;
+        }
+
+        .item:hover{
+            flex-grow: 5;
+        }
+
+        .action-bar{
+            height: 60px;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 20px;
+        }
+
+        .btn-close{
+            display: block;
+            height: 50px;
+            margin: 0 auto;
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+            padding: 5px;
+            font-size: 3em;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="action-bar">
+        <span class="btn-close">X</span>
+    </div>
+    <div class="main">
+        <div></div>
+        <!--<div class="item">
+            <h4>Item title</h4>
+            <span>This is what will be the iwtem core. If the item is a text, the text will be displayed here<br/> But if it is a media, displayable, t will be thumbnailed here instead</span>
+        </div>
+        <div class="item">
+            <h4>Item title</h4>
+            <span>This is what will be the iwtem core. If the item is a text, the text will be displayed here<br/> But if it is a media, displayable, t will be thumbnailed here instead</span>
+        </div>
+        <div class="item">
+            <h4>Item title</h4>
+            <span>This is what will be the iwtem core. If the item is a text, the text will be displayed here<br/> But if it is a media, displayable, t will be thumbnailed here instead</span>
+        </div>-->
+    </div>
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/clipboard.js">
+    </script>
+    <script>
+        if (window.module) module = window.module;
+    </script>
+</body>
+
+</html>
